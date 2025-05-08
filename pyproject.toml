@@ -22,6 +22,7 @@ classifiers = [
 ]
 # Add runtime dependencies here if any are known upfront
 dependencies = [
+    "google-api-python-client>=2.169.0",
     "universal_mcp>=0.1.11",
 ]
 
