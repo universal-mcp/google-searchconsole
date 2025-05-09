@@ -1,12 +1,12 @@
 
 from universal_mcp.servers import SingleMCPServer
-from universal_mcp.integrations import AgentRIntegration
+from universal_mcp.integrations import ApiKeyIntegration
 from universal_mcp.stores import EnvironmentStore
 
 from universal_mcp_google_search_console.app import GoogleSearchConsoleApp
 
 env_store = EnvironmentStore()
-integration_instance = AgentRIntegration(name="google-search-console", store=env_store)
+integration_instance = ApiKeyIntegration(name="CONSOLE_API_KEY", store=env_store)
 app_instance = GoogleSearchConsoleApp(integration=integration_instance)
 
 mcp = SingleMCPServer(
