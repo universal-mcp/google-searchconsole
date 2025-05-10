@@ -394,5 +394,5 @@ class GoogleSearchConsoleApp(APIApplication):
             self.get_site,
             self.list_sites,
             self.index_inspect_url,
-            self.query_search_analytics, # Added new tool here
+            self.query_search_analytics,
         ]
