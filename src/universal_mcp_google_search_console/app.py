@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 class GoogleSearchConsoleApp(APIApplication):
     def __init__(self, integration: Integration = None, **kwargs) -> None:
-        super().__init__(name='google_search_console', integration=integration, **kwargs)
+        super().__init__(name='google-search-console', integration=integration, **kwargs)
         self.webmasters_base_url = "https://www.googleapis.com/webmasters/v3"
         self.searchconsole_base_url = "https://searchconsole.googleapis.com/v1"
 
