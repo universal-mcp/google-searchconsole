@@ -1,12 +1,12 @@
-# Jinja template: universal_mcp_google_search_console/pyproject.toml
+# Jinja template: universal_mcp_google_searchconsole/pyproject.toml
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "universal_mcp_google_search_console"
+name = "universal_mcp_google_searchconsole"
 version = "0.1.0"
-description = "A Universal MCP Application: universal_mcp_google_search_console"
+description = "A Universal MCP Application: universal_mcp_google_searchconsole"
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" } # Or choose another default license
@@ -38,7 +38,7 @@ dev = [
 ]
 
 [project.scripts]
-universal_mcp_google_search_console = "universal_mcp_google_search_console:main"
+universal_mcp_google_searchconsole = "universal_mcp_google_searchconsole:main"
 
 [project.urls]
 Homepage = "" # Add project URL later
@@ -46,7 +46,7 @@ Repository = "" # Add repository URL later
 
 # --- Hatch Configuration ---
 [tool.hatch.version]
-path = "src/universal_mcp_google_search_console/__init__.py"
+path = "src/universal_mcp_google_searchconsole/__init__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
@@ -55,13 +55,13 @@ dependencies = [
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
-test-cov = "pytest --cov-report term-missing --cov-config=pyproject.toml --cov=src/universal_mcp_google_search_console --cov=tests {args:tests}"
+test-cov = "pytest --cov-report term-missing --cov-config=pyproject.toml --cov=src/universal_mcp_google_searchconsole --cov=tests {args:tests}"
 lint = "ruff check . && ruff format --check ." # Check formatting and lint
 format = "ruff format ." # Apply formatting
 
 # Configure pytest coverage
 [tool.coverage.run]
-source = ["src/universal_mcp_google_search_console"]
+source = ["src/universal_mcp_google_searchconsole"]
 branch = true
 
 [tool.coverage.report]

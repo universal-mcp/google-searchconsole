@@ -1,6 +1,6 @@
-# Google-search-console Universal MCP Server
+# Google SearchConsole Universal MCP Server
 
-This repository contains an implementation of an Google-search-console Universal MCP (Model Context Protocol) server. It provides a standardized interface for interacting with Google-search-console's SEO and backlink analysis tools through a unified API.
+This repository contains an implementation of an Google SearchConsole Universal MCP (Model Context Protocol) server. It provides a standardized interface for interacting with Google SearchConsole's SEO and backlink analysis tools through a unified API.
 
 The server is built using the Universal MCP framework.
 
@@ -8,13 +8,13 @@ This implementation follows the MCP specification, ensuring compatibility with o
 
 ## Usage
 
-You can start using Google-search-console directly from [agentr.dev](https://agentr.dev). Visit [agentr.dev/apps](https://agentr.dev/apps) and enable Google-search-console.
+You can start using Google SearchConsole directly from [agentr.dev](https://agentr.dev). Visit [agentr.dev/apps](https://agentr.dev/apps) and enable Google SearchConsole.
 
 If you have not used universal mcp before follow the setup instructions at [agentr.dev/quickstart](https://agentr.dev/quickstart)
 
 ## Available Tools
 
-The full list of available tools is at [./src/universal_mcp_google_search_console/README.md](./src/universal_mcp_google_search_console/README.md)
+The full list of available tools is at [./src/universal_mcp_google_searchconsole/README.md](./src/universal_mcp_google_searchconsole/README.md)
 
 ## Local Development
 
@@ -54,14 +54,14 @@ Follow the steps below to set up your development environment:
 3. **Start the MCP Inspector**
 
    ```bash
-   mcp dev src/universal_mcp_google_search_console/mcp.py
+   mcp dev src/universal_mcp_google_searchconsole/mcp.py
    ```
 
    This will start the MCP inspector. Make note of the address and port shown in the console output.
 
 4. **Install the Application**
    ```bash
-   mcp install src/universal_mcp_google_search_console/mcp.py
+   mcp install src/universal_mcp_google_searchconsole/mcp.py
    ```
 
 ## 📁 Project Structure
@@ -69,7 +69,7 @@ Follow the steps below to set up your development environment:
 ```text
 .
 ├── src/
-│   └── universal_mcp_google_search_console/
+│   └── universal_mcp_google_searchconsole/
 │       ├── __init__.py       # Package initializer
 │       ├── mcp.py            # Server entry point
 │       ├── app.py            # Application tools

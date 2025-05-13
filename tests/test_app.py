@@ -2,29 +2,29 @@ from unittest.mock import MagicMock
 
 import pytest
 
-from universal_mcp_google_search_console.app import GoogleSearchConsoleApp
+from universal_mcp_google_searchconsole.app import GoogleSearchconsoleApp
 
 @pytest.fixture
 def app_instance():
-    """Provides a GoogleSearchConsoleApp instance for tests."""
+    """Provides a GoogleSearchconsoleApp instance for tests."""
     mock_integration = MagicMock()
     mock_integration.get_credentials.return_value = {"access_token": "dummy_access_token"}
 
-    return GoogleSearchConsoleApp(integration=mock_integration)
+    return GoogleSearchconsoleApp(integration=mock_integration)
 
 def test_universal_mcp_google_search_console_app_initialization(app_instance):
     """
-    Test that the GoogleSearchConsoleApp instance is initialized correctly with a name.
+    Test that the GoogleSearchconsoleApp instance is initialized correctly with a name.
     """
     assert hasattr(app_instance, 'name'), "Application instance should have a 'name' attribute."
     assert isinstance(app_instance.name, str), "Application name should be a string."
     assert app_instance.name.strip() != "", "Application name should not be empty."
-    assert app_instance.name == "google-search-console", "GoogleSearchConsoleApp instance has unexpected name."
+    assert app_instance.name == "google-searchconsole", "GoogleSearchconsoleApp instance has unexpected name."
 
 
 def test_universal_mcp_google_search_console_tool_docstrings_format(app_instance):
     """
-    Test that each tool method in GoogleSearchConsoleApp has a well-formatted docstring,
+    Test that each tool method in GoogleSearchconsoleApp has a well-formatted docstring,
     including summary, Args, Returns, and Tags sections.
     Checks for Raises section optionally.
     """
@@ -55,7 +55,7 @@ def test_universal_mcp_google_search_console_tool_docstrings_format(app_instance
 
 def test_universal_mcp_google_search_console_tools_are_callable(app_instance):
     """
-    Test that each tool method returned by list_tools in GoogleSearchConsoleApp is callable.
+    Test that each tool method returned by list_tools in GoogleSearchconsoleApp is callable.
     """
     tools = app_instance.list_tools()
     assert isinstance(tools, list), "list_tools() should return a list."
