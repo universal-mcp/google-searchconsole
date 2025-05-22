@@ -2207,8 +2207,8 @@ wheels = [
 ]
 
 [[package]]
-name = "universal-mcp-google-search-console"
-version = "0.1.0"
+name = "universal-mcp-google-searchconsole"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "google-api-python-client" },
