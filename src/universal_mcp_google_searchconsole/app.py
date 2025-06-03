@@ -4,7 +4,6 @@ from typing import Any, Optional, List, Dict # Changed from dict to Dict for old
 from universal_mcp.applications import APIApplication
 from universal_mcp.integrations import Integration
 import logging
-import httpx
 
 logger = logging.getLogger(__name__)
 
@@ -74,7 +73,7 @@ class GoogleSearchconsoleApp(APIApplication):
             Dict[str, Any]: List of sitemap resources.
             
         Tags:
-            sitemap_management
+            sitemap_management, important
         """
         siteUrl_encoded = urllib.parse.quote(siteUrl, safe='')
         url = f"{self.webmasters_base_url}/sites/{siteUrl_encoded}/sitemaps"
@@ -125,7 +124,7 @@ class GoogleSearchconsoleApp(APIApplication):
             Dict[str, Any]: Site resource upon successful addition.
             
         Tags:
-            site_management
+            site_management, important
         """
         siteUrl_encoded = urllib.parse.quote(siteUrl, safe='')
         url = f"{self.webmasters_base_url}/sites/{siteUrl_encoded}"
@@ -221,8 +220,8 @@ class GoogleSearchconsoleApp(APIApplication):
         response.raise_for_status()
         return response.json()
 
-    # ... (previous methods of GoogleSearchConsoleApp) ...
-
+    # --- Search Analytics ---
+    
     def query_search_analytics(
         self,
         siteUrl: str,
@@ -305,14 +304,14 @@ class GoogleSearchconsoleApp(APIApplication):
 
     def list_tools(self):
         return [
-            self.delete_sitemap,
             self.get_sitemap,
             self.list_sitemaps,
             self.submit_sitemap,
-            self.add_site,
-            self.delete_site,
+            self.delete_sitemap,
             self.get_site,
             self.list_sites,
+            self.add_site,
+            self.delete_site,
             self.index_inspect_url,
             self.query_search_analytics,
         ]
